@@ -115,13 +115,6 @@ El despliegue se realizó en Render:
 
 Las API keys se configuran como variables de entorno en Render (nunca en el repositorio).
 
-## Compartir acceso al repositorio
-
-Se debe invitar a `matias@adipa.cl` como colaborador del repositorio
-(`cabacor98/giunti-prueba`) con permisos de escritura. La invitación se gestiona desde
-GitHub → Settings → Collaborators (el token utilizado no tiene permisos de administración
-sobre colaboradores).
-
 ## Notas
 
 - Solo se usan cuestionarios inventados; no se sube material de tests comerciales ni datos personales.
