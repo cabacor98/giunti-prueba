@@ -1,0 +1,65 @@
+{
+  "titulo": "Sample Questionnaire",
+  "idioma": "en",
+  "total_items": 4,
+  "items": [
+    {
+      "numero": 1,
+      "enunciado": "I worry excessively about unimportant things.",
+      "tipo": "escala_likert",
+      "alternativas": [
+        {
+          "valor": 0,
+          "texto": "Never"
+        },
+        {
+          "valor": 1,
+          "texto": "Sometimes"
+        },
+        {
+          "valor": 2,
+          "texto": "Often"
+        },
+        {
+          "valor": 3,
+          "texto": "Always"
+        }
+      ],
+      "respuesta_correcta": null
+    },
+    {
+      "numero": 2,
+      "enunciado": "Which number completes the series: 2, 4, 8, 16, ...?",
+      "tipo": "seleccion_multiple",
+      "alternativas": [
+        {
+          "valor": "A",
+          "texto": "18"
+        },
+        {
+          "valor": "B",
+          "texto": "24"
+        },
+        {
+          "valor": "C",
+          "texto": "32"
+        }
+      ],
+      "respuesta_correcta": "C"
+    },
+    {
+      "numero": 3,
+      "enunciado": "Describe a recent situation in which you felt under pressure.",
+      "tipo": "desarrollo",
+      "alternativas": [],
+      "respuesta_correcta": null
+    },
+    {
+      "numero": 4,
+      "enunciado": "Match each concept with its definition:",
+      "tipo": "emparejamiento",
+      "alternativas": [],
+      "respuesta_correcta": null
+    }
+  ]
+}
