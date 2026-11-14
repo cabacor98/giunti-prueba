@@ -1,0 +1,23 @@
+name: Keep Render services awake
+
+on:
+  schedule:
+    - cron: "*/13 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop after target date
+        run: |
+          # Keep pinging until Friday 20 Nov 2026 (inclusive).
+          today=$(date -u +%Y-%m-%d)
+          if [[ "$today" > "2026-11-20" ]]; then
+            echo "Past target date ($today). Skipping."
+            exit 0
+          fi
+      - name: Ping backend health
+        run: curl -fsS --max-time 60 https://giunti-backend.onrender.com/health
+      - name: Ping frontend
+        run: curl -fsS --max-time 60 -o /dev/null https://giunti-frontend.onrender.com
