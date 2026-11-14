@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: giunti-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash
+      - key: MAX_FILE_SIZE_MB
+        value: "10"
+      - key: ALLOWED_ORIGINS
+        value: "http://localhost:3000,https://giunti-prueba.vercel.app"
+      - key: LOG_LEVEL
+        value: INFO
+    healthCheckPath: /health
